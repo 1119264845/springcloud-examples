@@ -1,0 +1,45 @@
+# Created by .ignore support plugin (hsz.mobi)
+!/.idea/
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+*.log.zip
+*.log
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+/.mvn/
+/mvnw.cmd
+/mvnw
+/.mvn/wrapper/maven-wrapper.jar
+/logs/
+/src/main/webapp/
+!/springcloud-examples.iml
+/eureka-double-client/.mvn/
+/eureka-double-client/mvnw
+/eureka-double-client/mvnw.cmd

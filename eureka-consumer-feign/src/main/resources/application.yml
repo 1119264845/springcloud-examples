@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-consumer-feign-demo
+
+
+server:
+  port: 9707
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9700/eureka/

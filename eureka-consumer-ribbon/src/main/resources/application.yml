@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-consumer-ribbon-demo
+
+
+server:
+  port: 9706
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9700/eureka/
