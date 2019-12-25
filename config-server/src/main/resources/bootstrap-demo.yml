@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          ## 克隆的文件存放在本地的地址
+          basedir: /resources
+          ## 超时时间 以秒为单位
+          timeout: 4
+          ## 多数据源时 备用的顶级仓库
+          uri: https://github.com/spring-cloud-samples/config-repo
+          repos:
+            ## 在repos下配置多个数据源仓库
+            config-client:
+              ## 当本地文件有可能被污染时 通过该命名强制获取远程数据
+              force-pull: true
+              ## 地址及验证信息 {当无需验证时 仅url即可}
+              uri: https://github.com/xxxx/xxxx
+              username: xxxx
+              password: xxxx
+              basedir: /resources
+              ## 多数据源的repos下的仓库 在配置中心启动时 不会马上克隆数据到本地 通过下列在启动时获取
+              cloneOnStart: true
+              ## git仓库下文件夹地址
+              search-paths: paths
+              ## 是否跳过git的ssl验证
+              skipSslValidation: true
+              ## 匹配条件 如下为所有以config开头的配置文件 同时允许匹配所有{profile}
+              pattern: config*/*
+
+
+server:
+  port: 9500
